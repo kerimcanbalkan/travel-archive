@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         light: {
-          "fill": "#F6EEE1",
+          "fill": "#6CACE",
           "text-base": "#012C56",
           "accent": "#E14A39",
           "card": "#D9D1C3",
