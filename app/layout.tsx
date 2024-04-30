@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import NavBar from "./ui/navbar";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex justify-center items-center bg-light-fill`}>{children}</body>
+      <body className={`${inter.className} justify-center items-center bg-light-fill`}>
+        <NavBar />
+        {children}
+      </body>
     </html >
   );
 }

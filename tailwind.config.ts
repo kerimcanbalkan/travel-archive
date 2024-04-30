@@ -10,9 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         light: {
-          "fill": "#6CACE",
+          "fill": "#6CACE4",
           "text-base": "#012C56",
           "accent": "#E14A39",
+          "acc": "#FFB81C",
           "card": "#D9D1C3",
           "card-muted": "#EFD8B0",
           "border": "#DC9891"
