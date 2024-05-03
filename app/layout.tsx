@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: "A website to archive your travel memories",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +21,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} justify-center items-center bg-light-fill`}>
         <NavBar />
-        <SideBar />
         {children}
       </body>
     </html >
