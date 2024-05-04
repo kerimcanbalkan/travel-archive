@@ -7,16 +7,17 @@ import SideBar from "./ui/sidebar";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [countryName, setCountryName] = useState<string>("");
 
-  const toggleSidebar = () => {
+  const toggleSidebar = (name: string) => {
     setIsOpen(!isOpen);
-    console.log(isOpen);
+    setCountryName(name)
   }
 
 
   return (
     <div className="container">
-      <SideBar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      <SideBar isOpen={isOpen} toggleSidebar={toggleSidebar} countryName={countryName} />
       <TransformWrapper>
         <TransformComponent>
           <WorldMap toggleSidebar={toggleSidebar} />
