@@ -8,13 +8,23 @@ interface Props {
 
 export default function SideBar({ isOpen, toggleSidebar, countryName }: Props) {
   return (
-    <div id="sidebar" className={`w-2/5 h-lvh bg-white fixed top-0 left-0 z-50 p-10 rounded-md  ${isOpen ? 'transition-transform translate-x-0' : 'hidden transition-transform -translate-x-full'}`} >
+    <div
+      id="sidebar"
+      className={`w-2/5 h-full bg-white fixed z-50 p-10 rounded-md transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+    >
       <div className="container flex justify-end">
-        <button className="" onClick={() => {
-          toggleSidebar("")
-        }} ><IoIosCloseCircleOutline className="fill-light-accent text-xl" /></button>
+        <button
+          onClick={() => {
+            toggleSidebar("");
+          }}
+        >
+          <IoIosCloseCircleOutline className="fill-light-accent text-xl hover:text-2xl" />
+        </button>
       </div>
-      <h1 id="countryName" className="">{countryName}</h1>
-    </div >
+      <h1 id="countryName">{countryName}</h1>
+      <h3>Save your memories in {countryName}</h3>
+    </div>
   );
 }
+
